@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<!--    <script src="./script25.js" defer></script>-->
+<!--    <link rel="stylesheet" href="style28.css">-->
+<!--    <link rel="stylesheet" href="style29.css">-->
+<!--    <link rel="stylesheet" href="style30.css">-->
+<!--    <link rel="stylesheet" href="style31.css">-->
+<!--    <link rel="stylesheet" href="style32.css">-->
+<!--    <link rel="stylesheet" href="style33.css">-->
+<!--    <link rel="stylesheet" href="style34.css">-->
+<!--    <link rel="stylesheet" href="style35.css">-->
+<!--    <link rel="stylesheet" href="style36.css">-->
+<!--    <link rel="stylesheet" href="style37.css">-->
+<!--    <link rel="stylesheet" href="style38.css">-->
+<!--    <link rel="stylesheet" href="style39.css">-->
+<!--    <link rel="stylesheet" href="style40.css">-->
+<!--    <link rel="stylesheet" href="style41.css">-->
+    <link rel="stylesheet" href="style42.css">
+
+</head>
+<body style="background-color: aquamarine">
+<form class="filter">
+    <p>
+        <label for="query">Поиск по имени товара:</label>
+        <input id="query" name="query" placeholder="Диван..." />
+    </p>
+    <p>
+        <label for="min-price">Минимальная цена:</label>
+        <input id="min-price" name="min-price" value="0" type="number" />
+    </p>
+    <p>
+        <label for="max-price">Максимальная цена:</label>
+        <input id="max-price" name="max-price" value="10000" type="number" />
+    </p>
+    <button type="submit">Найти</button>
+</form>
+
+
+
+
+
+<!--<h1>Главная</h1>-->
+<!--<nav>-->
+<!--    <ul>-->
+<!--        <li>-->
+<!--            <a href="./">Главная</a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--            <a href="./catalog.html">Каталог</a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--            <a href="./about.html">О нас</a>-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--</nav>-->
+<!--<button id="back-button" type="button">Назад</button>-->
+<!--<button id="forward-button" type="button">Вперед</button>-->
+
+<!--<button id="add-to-history" type="button">Добавить запись в историю сессии</button>-->
+<!--<button id="show-history" type="button">Посмотреть историю сессии</button>-->
+
+
+<!--<h1>-->
+<!--    Браузерные хранилища данных: localStorage, sessionStorage, cookie, IndexedDB. Смена темы на сайте-->
+<!--</h1>-->
+
+<!--<button type="button" data-js-theme-switcher>Сменить тему</button>-->
+
+<!--<main>-->
+<!--    <h1>Клиент-серверное взаимодействие</h1>-->
+
+<!--    <form class="create-post-form">-->
+<!--        <h2>Создание поста</h2>-->
+<!--        <p>-->
+<!--            <label for="new-post-title">Заголовок поста:</label>-->
+<!--            <input id="new-post-title" name="title" />-->
+<!--        </p>-->
+<!--        <p>-->
+<!--            <label for="new-post-id">Идентификатор поста:</label>-->
+<!--            <input id="new-post-id" name="id" type="number" />-->
+<!--        </p>-->
+<!--        <button type="submit">-->
+<!--            Сохранить пост на сервер-->
+<!--        </button>-->
+<!--    </form>-->
+
+<!--    <form class="load-post-form">-->
+<!--        <h2>Поиск поста по ID</h2>-->
+<!--        <p>-->
+<!--            <label for="post-id">Идентификатор поста:</label>-->
+<!--            <input id="post-id" type="text" value="1" />-->
+<!--        </p>-->
+<!--        <button type="submit">-->
+<!--            Загрузить информацию с сервера-->
+<!--        </button>-->
+<!--    </form>-->
+
+<!--    <form class="search-posts-form">-->
+<!--        <h2>Поиск постов</h2>-->
+<!--        <p>-->
+<!--            <label for="post-views">Минимум просмотров:</label>-->
+<!--            <input id="post-views" type="number" value="0" />-->
+<!--        </p>-->
+<!--        <button type="submit">-->
+<!--            Найти посты-->
+<!--        </button>-->
+<!--    </form>-->
+<!--    <div class="result"></div>-->
+
+<!--</main>-->
+<!--<form id="regForm" action="/registration" method="post" novalidate data-js-form>-->
+<!--    <p class="field">-->
+<!--        <label class="field__label" for="login">Логин</label>-->
+<!--        <input-->
+<!--                class="field__control"-->
+<!--                id="login"-->
+<!--                name="login"-->
+<!--                required-->
+<!--                minlength="3"-->
+<!--                maxlength="12"-->
+<!--                aria-errormessage="login-errors"-->
+<!--        />-->
+<!--        <span class="field__errors" id="login-errors" data-js-form-field-errors></span>-->
+<!--    </p>-->
+<!--    <p class="field">-->
+<!--        <label class="field__label" for="password">Пароль</label>-->
+<!--        <input-->
+<!--                class="field__control"-->
+<!--                id="password"-->
+<!--                name="password"-->
+<!--                type="text"-->
+<!--                required-->
+<!--                minlength="8"-->
+<!--                maxlength="16"-->
+<!--                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}"-->
+<!--                title="Пароль должен быть длиной от 8 до 16 символов, включать как минимум одну цифру, одну букву в нижнем и одну букву в верхнем регистре"-->
+<!--                aria-errormessage="password-errors"-->
+<!--        />-->
+<!--        <span class="field__errors" id="password-errors" data-js-form-field-errors></span>-->
+<!--    </p>-->
+<!--    <p class="field">-->
+<!--        <label class="field__label" for="about">О себе</label>-->
+<!--        <textarea class="field__control" id="about" name="about"></textarea>-->
+<!--    </p>-->
+<!--    <fieldset class="radios">-->
+<!--        <legend class="radios__legend">Ваш пол</legend>-->
+
+<!--        <input-->
+<!--                class="radios__control"-->
+<!--                id="male"-->
+<!--                name="gender"-->
+<!--                type="radio"-->
+<!--                value="Мужской"-->
+<!--                required-->
+<!--                aria-errormessage="password-errors"-->
+<!--        />-->
+<!--        <label class="radios__label" for="male">Мужской</label>-->
+
+<!--        <input-->
+<!--                class="radios__control"-->
+<!--                id="female"-->
+<!--                name="gender"-->
+<!--                type="radio"-->
+<!--                value="Женский"-->
+<!--                required-->
+<!--                aria-errormessage="password-errors"-->
+<!--        />-->
+<!--        <label class="radios__label" for="female">Женский</label>-->
+
+<!--        <span class="field__errors" id="gender-errors" data-js-form-field-errors></span>-->
+<!--    </fieldset>-->
+<!--    <div class="field checkbox">-->
+<!--        <input-->
+<!--                class="checkbox__control"-->
+<!--                id="agreement"-->
+<!--                name="agreement"-->
+<!--                type="checkbox"-->
+<!--                required-->
+<!--                aria-errormessage="agreement-errors"-->
+<!--        />-->
+<!--        <label class="field__label checkbox__label" for="agreement">Согласен на всё</label>-->
+<!--        <span class="field__errors" id="agreement-errors" data-js-form-field-errors></span>-->
+<!--    </div>-->
+<!--    <button type="submit">Регистрация</button>-->
+<!--</form>-->
+
+
+<!--<form id="regForm" action="/registration" method="post">-->
+<!--    <p class="field">-->
+<!--        <label class="field__label" for="login">Логин</label>-->
+<!--        <input-->
+<!--                class="field__control"-->
+<!--                id="login"-->
+<!--                name="login"-->
+<!--        />-->
+<!--    </p>-->
+<!--    <p class="field">-->
+<!--        <label class="field__label" for="password">Пароль</label>-->
+<!--        <input-->
+<!--                class="field__control"-->
+<!--                id="password"-->
+<!--                name="password"-->
+<!--                type="password"-->
+<!--        />-->
+<!--    </p>-->
+<!--    <p class="field">-->
+<!--        <label class="field__label" for="about">О себе</label>-->
+<!--        <textarea class="field__control" id="about" name="about"></textarea>-->
+<!--    </p>-->
+<!--    <fieldset class="radios">-->
+<!--        <legend class="radios__legend">Ваш пол</legend>-->
+
+<!--        <input-->
+<!--                class="radios__control"-->
+<!--                id="male"-->
+<!--                name="gender"-->
+<!--                type="radio"-->
+<!--                value="Мужской"-->
+<!--        />-->
+<!--        <label class="radios__label" for="male">Мужской</label>-->
+
+<!--        <input-->
+<!--                class="radios__control"-->
+<!--                id="female"-->
+<!--                name="gender"-->
+<!--                type="radio"-->
+<!--                value="Женский"-->
+<!--        />-->
+<!--        <label class="radios__label" for="female">Женский</label>-->
+<!--    </fieldset>-->
+<!--    <div class="field checkbox">-->
+<!--        <input-->
+<!--                class="checkbox__control"-->
+<!--                id="agreement"-->
+<!--                name="agreement"-->
+<!--                type="checkbox"-->
+<!--        />-->
+<!--        <label class="field__label checkbox__label" for="agreement">Согласен на всё</label>-->
+<!--    </div>-->
+<!--    <button type="submit">Регистрация</button>-->
+<!--</form>-->
+
+<!--<form id="regForm" action="/registration" method="post">-->
+<!--    <p class="field">-->
+<!--        <label class="field__label" for="login">Логин</label>-->
+<!--        <input class="field__control" id="login" name="login" value="The Best Frontend Developer"/>-->
+<!--    </p>-->
+<!--    <p class="field">-->
+<!--        <label class="field__label" for="password">Пароль</label>-->
+<!--        <input class="field__control" id="password" name="password" type="password" />-->
+<!--    </p>-->
+<!--    <p class="field">-->
+<!--        <label class="field__label" for="about">О себе</label>-->
+<!--        <textarea class="field__control" id="about" name="about">The Best Of The Best</textarea>-->
+<!--    </p>-->
+<!--    <fieldset class="radios">-->
+<!--        <legend class="radios__legend">Ваш пол</legend>-->
+
+<!--        <input class="radios__control"-->
+<!--               id="male" name="gender"-->
+<!--               type="radio"-->
+<!--               value="Mujskoy"-->
+<!--               checked/>-->
+<!--        <label class="radios__label" for="male">Мужской</label>-->
+
+<!--        <input class="radios__control"-->
+<!--               id="female"-->
+<!--               name="gender"-->
+<!--               type="radio"-->
+<!--               value="Jenskiy"/>-->
+<!--        <label class="radios__label" for="female">Женский</label>-->
+<!--    </fieldset>-->
+<!--    <div class="field checkbox">-->
+<!--        <input class="checkbox__control"-->
+<!--               id="agreement"-->
+<!--               name="agreement"-->
+<!--               type="checkbox"-->
+<!--               checked/>-->
+<!--        <label class="field__label checkbox__label" for="agreement">Согласен на всё</label>-->
+<!--    </div>-->
+<!--    <button type="submit">Регистрация</button>-->
+<!--</form>-->
+
+<!--<div class="city-selection">-->
+<!--    <label for="city">Ваш город:</label>-->
+<!--    <select id="city" name="city" form="regForm" multiple>-->
+<!--        <option value="Москва">Москва</option>-->
+<!--        <option value="Санкт-Петербург" selected>Санкт-Петербург</option>-->
+<!--        <option value="Антананариву" selected>Антананариву</option>-->
+<!--        <option value="Бандар-Сери-Бегаван">Бандар-Сери-Бегаван</option>-->
+<!--        <option value="Лланвайр Пуллгвингилл">Лланвайр Пуллгвингилл</option>-->
+<!--    </select>-->
+<!--</div>-->
+
+<!--<form id="authForm" action="/auth" method="post">-->
+<!--    <p class="field">-->
+<!--        <label class="field__label" for="auth-login">Логин</label>-->
+<!--        <input class="field__control" id="auth-login" name="login" />-->
+<!--    </p>-->
+<!--    <p class="field">-->
+<!--        <label class="field__label" for="auth-password">Пароль</label>-->
+<!--        <input class="field__control" id="auth-password" name="password" type="password" />-->
+<!--    </p>-->
+<!--    <button type="submit">Войти</button>-->
+<!--</form>-->
+
+
+
+<!--<input id="login" placeholder="username">-->
+
+
+
+
+
+
+<!--<p>-->
+<!--    <label for="name">Имя:</label>-->
+<!--    <input type="text" placeholder="Alexander" id="name">-->
+<!--&lt;!&ndash;    <span id="error-message"></span>&ndash;&gt;-->
+<!--</p>-->
+<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aspernatur consequatur cum dolores eaque earum explicabo, fuga inventore laborum magnam maiores modi molestiae necessitatibus recusandae similique soluta vel veniam voluptatibus?</p>-->
+<!--<p>Здравствуй<b class="name-output"></b></p>-->
+
+
+
+<!--<input type="text">-->
+
+<!--<div class="chicken draggable" data-js-dnd>-->
+<!--    <img src="./png/курица-removebg-preview.png" alt="">-->
+<!--</div>-->
+<!--<div class="fish draggable" data-js-dnd>-->
+<!--    <img src="./png/fish-removebg-preview.png" alt="">-->
+<!--</div>-->
+<!--<div class="shrimp draggable" data-js-dnd>-->
+<!--    <img src="./png/креветка-removebg-preview.png" alt="">-->
+<!--</div>-->
+<!--<div class="cat" data-js-dnd>-->
+<!--    <img src="./png/cat-removebg-preview.png" alt="">-->
+<!--</div>-->
+<!--<div class="box"></div>-->
+
+
+<!--<div class="box-1"> box-1-->
+<!--    <div class="box-2"> box-2-->
+<!--        <div class="box-3"> box-3-->
+<!--            <button class="button" type="button"><span>Нажми меня</span></button>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+
+<!--<div class="box">-->
+<!--    <button class="button" type="button">Нажми меня</button>-->
+<!--</div>-->
+
+
+
+
+<!--<main>-->
+<!--    <section>-->
+<!--        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, amet consequuntur impedit ipsa nostrum officia provident quos repellendus suscipit tempore. Aut facere iste odio porro sint suscipit tenetur, totam ullam.</p>-->
+<!--    </section>-->
+<!--    <section>-->
+<!--        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, amet consequuntur impedit ipsa nostrum officia provident quos repellendus suscipit tempore. Aut facere iste odio porro sint suscipit tenetur, totam ullam.</p>-->
+<!--    </section>-->
+<!--    <section>-->
+<!--        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, amet consequuntur impedit ipsa nostrum officia provident quos repellendus suscipit tempore. Aut facere iste odio porro sint suscipit tenetur, totam ullam.</p>-->
+<!--    </section>-->
+<!--    <section>-->
+<!--        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, amet consequuntur impedit ipsa nostrum officia provident quos repellendus suscipit tempore. Aut facere iste odio porro sint suscipit tenetur, totam ullam.</p>-->
+<!--    </section>-->
+<!--</main>-->
+
+<!--<div class="preloader">-->
+<!--    <div class="preloader__in"></div>-->
+<!--</div>-->
+
+
+
+
+
+
+
+
+<!--<a href="https://www.youtube.com/watch?v=BY4lw9uykFk&list=PL0MUAHwery4qn4Y27iUxmzC-JiauX7vSL&index=33">YouTube</a>-->
+
+<!--<form action="">-->
+<!--  <p>-->
+<!--      <label for="login">Логин</label>-->
+<!--      <input name="login" id="login"/>-->
+<!--  </p>-->
+<!--    <p>-->
+<!--        <label for="password">Пароль:</label>-->
+<!--        <input type="password" name="password" id="password"/>-->
+<!--    </p>-->
+<!--    <button type="submit">Войти</button>-->
+<!--</form>-->
+
+
+<!--<div class="todo">-->
+<!--    <ul class="todo__list">-->
+<!--        <li class="todo__item"><span>Todo item...</span></li>-->
+<!--        <li class="todo__item"><span>Todo item...</span></li>-->
+<!--        <li class="todo__item"><span>Todo item...</span></li>-->
+<!--        <li class="todo__item"><span>Todo item...</span></li>-->
+<!--        <li class="todo__item"><span>Todo item...</span></li>-->
+<!--        <li class="todo__item"><span>Todo item...</span></li>-->
+<!--        <li class="todo__item"><span>Todo item...</span></li>-->
+<!--        <li class="todo__item"><span>Todo item...</span></li>-->
+<!--        <li class="todo__item"><span>Todo item...</span></li>-->
+<!--        <li class="todo__item"><span>Todo item...</span></li>-->
+<!--        <li class="todo__item"><span>Todo item...</span></li>-->
+<!--        <li class="todo__item"><span>Todo item...</span></li>-->
+<!--        <li class="todo__item"><span>Todo item...</span></li>-->
+<!--        <li class="todo__item"><span>Todo item...</span></li>-->
+<!--        <li class="todo__item"><span>Todo item...</span></li>-->
+<!--        <li class="todo__item"><span>Todo item...</span></li>-->
+<!--    </ul>-->
+<!--</div>-->
+
+<!--<div class="box-1">-->
+<!--    box-1-->
+<!--    <div class="box-2">-->
+<!--        box-2-->
+<!--        <div class="box-3">-->
+<!--            box-3-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<!--<button type="button">Нажми меня</button>-->
+<!--<button class="button-1" type="button">Нажми меня</button>-->
+<!--<button class="button-2" type="button">Убрать обработчик события</button>-->
+
+
+
+
+
+
+<!--<div class="box-1">-->
+<!--    <p class="paragraph-1">Параграф 1</p>-->
+<!--</div>-->
+<!--<div class="box-2">-->
+<!--    <p class="paragraph-2">Параграф 2</p>-->
+<!--</div>-->
+<!--<div class="box-3">-->
+<!--    <p class="paragraph-3">Параграф 3</p>-->
+<!--</div>-->
+<!--<div class="box-4">-->
+<!--    <p class="paragraph-4">Параграф 4</p>-->
+<!--</div>-->
+<!--<div class="box-5">-->
+<!--    <p class="paragraph-5">Параграф 5</p>-->
+<!--</div>-->
+
+
+
+
+<!--<div class="box">-->
+<!--    Просто текст-->
+<!--    <p class="paragraph-1">Первый параграф</p>-->
+<!--    <p class="paragraph-2">Второй параграф</p>-->
+<!--    <p class="paragraph-3">Третий параграф</p>-->
+<!--</div>-->
+
+
+
+
+
+
+
+<!--<section class="about">-->
+<!--    <h2>О нас</h2>-->
+<!--    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi aut debitis dicta dolore, eum fuga inventore ipsam minus non perferendis perspiciatis, quibusdam unde. Debitis earum ipsam qui similique vitae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorum error, esse est eveniet ipsa odit officiis similique tempore? Aspernatur blanditiis est iusto, laudantium quaerat quidem tempora vel? Perspiciatis, voluptatibus?    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores laboriosam officiis praesentium soluta. Corporis dolore dolores esse maiores mollitia nemo obcaecati quas, vero? Alias delectus deleniti explicabo nisi rem voluptatum!</p>-->
+<!--</section>-->
+<!--<section class="catalog">-->
+<!--    <h2>Каталог</h2>-->
+<!--    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi aut debitis dicta dolore, eum fuga inventore ipsam minus non perferendis perspiciatis, quibusdam unde. Debitis earum ipsam qui similique vitae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorum error, esse est eveniet ipsa odit officiis similique tempore? Aspernatur blanditiis est iusto, laudantium quaerat quidem tempora vel? Perspiciatis, voluptatibus?    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores laboriosam officiis praesentium soluta. Corporis dolore dolores esse maiores mollitia nemo obcaecati quas, vero? Alias delectus deleniti explicabo nisi rem voluptatum!</p>-->
+<!--</section>-->
+<!--<section class="reviews">-->
+<!--    <h2>Отзывы</h2>-->
+<!--    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi aut debitis dicta dolore, eum fuga inventore ipsam minus non perferendis perspiciatis, quibusdam unde. Debitis earum ipsam qui similique vitae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorum error, esse est eveniet ipsa odit officiis similique tempore? Aspernatur blanditiis est iusto, laudantium quaerat quidem tempora vel? Perspiciatis, voluptatibus?    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores laboriosam officiis praesentium soluta. Corporis dolore dolores esse maiores mollitia nemo obcaecati quas, vero? Alias delectus deleniti explicabo nisi rem voluptatum!</p>-->
+<!--</section>-->
+<!--<section class="contacts">-->
+<!--    <h2>Контакты</h2>-->
+<!--    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi aut debitis dicta dolore, eum fuga inventore ipsam minus non perferendis perspiciatis, quibusdam unde. Debitis earum ipsam qui similique vitae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorum error, esse est eveniet ipsa odit officiis similique tempore? Aspernatur blanditiis est iusto, laudantium quaerat quidem tempora vel? Perspiciatis, voluptatibus?    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores laboriosam officiis praesentium soluta. Corporis dolore dolores esse maiores mollitia nemo obcaecati quas, vero? Alias delectus deleniti explicabo nisi rem voluptatum!</p>-->
+<!--</section>-->
+<!--<section class="contacts">-->
+<!--    <h2>Телефон</h2>-->
+<!--    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi aut debitis dicta dolore, eum fuga inventore ipsam minus non perferendis perspiciatis, quibusdam unde. Debitis earum ipsam qui similique vitae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorum error, esse est eveniet ipsa odit officiis similique tempore? Aspernatur blanditiis est iusto, laudantium quaerat quidem tempora vel? Perspiciatis, voluptatibus?    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores laboriosam officiis praesentium soluta. Corporis dolore dolores esse maiores mollitia nemo obcaecati quas, vero? Alias delectus deleniti explicabo nisi rem voluptatum!</p>-->
+<!--</section>-->
+<!--<div class="box"></div>-->
+<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus cupiditate dignissimos dolore eius eos et explicabo fugiat ipsa modi, nam officia optio ratione sapiente sed soluta ullam vel voluptates voluptatum?</p>-->
+
+
+
+<!--///////////////////////////////////////////////////////////////////-->
+<!--<div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores autem cum id, impedit minus obcaecati perferendis. Adipisci consectetur consequuntur cumque dolorem eaque esse et fuga nobis odio officia, sapiente?-->
+<!--</div>-->
+<!--////////////////////////////////////////////////////////////////////-->
+<!--<form action="/login" class="form" data-some-value="123">-->
+<!--    <input class="form__input" name="login" placeholder="Логин">-->
+<!--    <input type="password" name="password" class="form__input" placeholder="Пароль">-->
+
+<!--    <button class="form__button" type="submit">Войти</button>-->
+<!--</form>-->
+<!--////////////////////////////////////////////////////////////////////-->
+<!--<div class="slider" data-js-slider='{-->
+<!--"direction": "vertical",-->
+<!--"slidesToShow": 1,-->
+<!--"slidesToScroll": 1-->
+<!--}' data-name="Alex" data-age="36">-->
+<!--    <ul class="slider__slide" data-js-slider-list="">-->
+<!--        <li class="slider__slide" data-js-slider-slide="">...</li>-->
+<!--        <li class="slider__slide" data-js-slider-slide="">...</li>-->
+<!--        <li class="slider__slide" data-js-slider-slide="">...</li>-->
+<!--    </ul>-->
+<!--</div>-->
+<!--//////////////////////////////////////////////-->
+<!--<ul class="List">-->
+<!--    <li class="item">Item</li>-->
+<!--    <li class="item">Item</li>-->
+<!--    <li class="item">Item</li>-->
+<!--    <li class="item">Item</li>-->
+<!--    <li class="item">Item</li>-->
+<!--    <li class="item">Item</li>-->
+<!--</ul>-->
+<!--<div id="wrapper">-->
+<!--    <ul class="list">-->
+<!--        <li class="item">Item</li>-->
+<!--        <li class="item">Item</li>-->
+<!--        <li class="item">Item</li>-->
+<!--        <li class="item">Item</li>-->
+<!--        <li class="item">Item</li>-->
+<!--        <li class="item">Item</li>-->
+<!--    </ul>-->
+<!--</div>-->
+<!--///////////////////////////////////////////////////-->
+<!--<div class="box-1">-->
+<!--    box-1-->
+<!--    <div class="box-2">-->
+<!--        box-2-->
+<!--        <div class="box-3">-->
+<!--            box-3-->
+<!--            <button id="myButton" type="button">-->
+<!--                Клик-->
+<!--            </button>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--//////////////////////////////////////////////////-->
+<!--<script src="./script.js"></script>-->
+<!--<script src="./script3.js"></script>-->
+<!--<script src="./script4.js"></script>-->
+<!--<script src="./script5.js"></script>-->
+<!--<script src="./script6.js"></script>-->
+<!--<script src="./script7.js"></script>-->
+<!--<script src="./script8.js"></script>-->
+<!--<script src="./script9.js"></script>-->
+<!--<script src="./script10.js"></script>-->
+<!--<script src="./script11.js"></script>-->
+<!--<script src="./script12.js"></script>-->
+<!--<script src="./script13.js"></script>-->
+<!--<script src="./script14.js"></script>-->
+<!--<script src="./script15.js"></script>-->
+<!--<script src="./script16.js"></script>-->
+<!--<script src="./script17.js"></script>-->
+<!--<script src="./script18.js"></script>-->
+<!--<script src="./script19.js"></script>-->
+<!--<script src="./script20.js"></script>-->
+<!--<script src="./script21.js"></script>-->
+<!--<script src="./script22.js" type="module"></script>-->
+<!--<script src="./tabs.js" type="module"></script>-->
+<!--<script src="./modals.js" type="module"></script>-->
+<!--<script src="./sliders.js" type="module"></script>-->
+<!--<script src="./before.js"></script>-->
+<!--<script src="./script23.js" type="module"></script>-->
+<!--<script src="./after.js"></script>-->
+<!--<script src="./script24.js"></script>-->
+<!--<script src="./script26.js"></script>-->
+<!--<script src="./script27.js"></script>-->
+<!--<script src="./script28.js"></script>-->
+<!--<script src="./script29.js"></script>-->
+<!--<script src="./script30.js"></script>-->
+<!--<script src="./script31.js"></script>-->
+<!--<script src="./script32.js"></script>-->
+<!--<script src="./animateSections.js"></script>-->
+<!--<script src="./preloader.js"></script>-->
+<!--<script src="./script33.js"></script>-->
+<!--<script src="./script34.js"></script>-->
+<!--<script src="./script35.js"></script>-->
+<!--<script src="./script36.js"></script>-->
+<!--<script src="./script37.js"></script>-->
+<!--<script src="./script38.js"></script>-->
+<!--<script src="./script39.js"></script>-->
+<!--<script src="./script40.js"></script>-->
+<!--<script src="./script41.js"></script>-->
+<script src="./script42.js"></script>
+</body>
+</html>

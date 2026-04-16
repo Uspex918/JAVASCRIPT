@@ -1,0 +1,15 @@
+/*body {*/
+/*    min-width: 200vw;*/
+/*    min-height: 200vh;*/
+/*}*/
+
+body {
+    background-color: #9ba7ec;
+}
+
+section {
+    padding: 20px;
+    border: 5px solid #4054ba;
+    margin: 20px;
+    background-color: #fff;
+}

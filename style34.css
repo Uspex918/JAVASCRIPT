@@ -1,0 +1,111 @@
+/*.box {*/
+/*    padding: 50px;*/
+/*    background-color: orange;*/
+/*    border-radius: 10px;*/
+/*}*/
+
+/*.button {*/
+/*    position: absolute;*/
+/*    top: -5px;*/
+/*    left: -5px;*/
+/*}*/
+
+
+/*.box-1 {*/
+/*    padding: 50px;*/
+/*    background-color: orange;*/
+/*    border-radius: 10px;*/
+/*}*/
+/*.box-2 {*/
+/*    padding: 50px;*/
+/*    background-color: #4054ba;*/
+/*    border-radius: 10px;*/
+/*}*/
+/*.box-3 {*/
+/*    padding: 50px;*/
+/*    background-color: rosybrown;*/
+/*    border-radius: 10px;*/
+/*}*/
+
+/*.box {*/
+/*    width: 420px;*/
+/*    height: 420px;*/
+/*    background-color: blue;;*/
+/*}*/
+
+/*.circle {*/
+/*    position: absolute;*/
+/*    width: 50px;*/
+/*    aspect-ratio: 1;*/
+/*    border-color: dodgerblue;*/
+/*    border-radius: 50%;*/
+/*    translate: -50% -50%;*/
+/*    user-select: none;*/
+/*}*/
+
+/*.circle.red {*/
+/*    background-color: red;*/
+/*}*/
+/*.circle__label {*/
+/*    position: absolute;*/
+/*    bottom: -5px;*/
+/*    left: 105%;*/
+/*    pointer-events: none;*/
+/*    user-select: none;*/
+/*}*/
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #bdc1c7;
+    font-size: 24px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    user-select: none;
+    pointer-events: none;
+}
+
+.chicken,
+.fish,
+.shrimp {
+    width: 20vw;
+}
+
+.chicken {
+    top: 3vw;
+    left: 25vw;
+}
+
+.fish {
+    top: 0;
+    left: 0;
+}
+
+.shrimp {
+    top: 17vw;
+    left: 6vw;
+}
+
+.cat {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50vw;
+}
+
+.draggable {
+    position: absolute;
+    z-index: 1;
+    cursor: grab;
+    transition-property: scale, opacity;
+    transition-duration: 0.2s;
+    touch-action: none;
+}
+
+.draggable.is-dragging {
+    cursor: grabbing;
+    opacity: 0.5;
+    scale: 1.05;
+}

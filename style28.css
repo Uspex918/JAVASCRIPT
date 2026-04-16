@@ -1,0 +1,8 @@
+.box::after {
+    content: "decoration";
+    text-decoration: underline;
+}
+
+.bG {
+    background: royalblue;
+}
