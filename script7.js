@@ -1,18 +1,18 @@
-// let password = ""
-//
-// while (password.length < 8) {
-//     password = prompt("Enter your password")
-// }
-//
-// console.log("Password: " + password)
+let password = ""
+
+while (password.length < 8) {
+    password = prompt("Enter your password")
+}
+
+console.log("Password: " + password)
 
 
-// let count = 0
-//
-// while (count <= 5) {
-//     console.log(count)
-//     count++
-// }
+let count = 0
+
+while (count <= 5) {
+    console.log(count)
+    count++
+}
 
 
 

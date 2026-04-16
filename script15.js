@@ -1,42 +1,42 @@
-// const arr = ["Hi", 100, true, {name: "Bob"}, () => console.log("Haha"), [true, false]];
-//
-// console.log(arr[3]["name"])
-// arr[4]()
-//
-// arr[1] = 600
-//
-// console.log(arr)
+const arr = ["Hi", 100, true, {name: "Bob"}, () => console.log("Haha"), [true, false]];
+
+console.log(arr[3]["name"])
+arr[4]()
+
+arr[1] = 600
+
+console.log(arr)
 
 
-// const arr = ["hello", 5]
-//
-// arr[2] = 5
-// arr[100] = 100
-//
-//
-// console.log(arr.length - 1)
-// console.log(arr.at(0))
-//
-// arr.push("push"," push2")
-// arr.unshift("unshift")
-//
-// console.log(arr)
-//
-// arr.pop()
-// arr.shift()
-// console.log(arr)
-//
-// const f = arr.join(", ")
-// console.log(f)
-// console.log(arr)
+const arr = ["hello", 5]
 
-// const message = "Это очень интересный случай"
-// console.log(message.split(" ").join(" "))
+arr[2] = 5
+arr[100] = 100
 
-// const arr1 = [1,2,3]
-// const arr2 = arr1.slice()
-//
-// arr2[0] = "0"
+
+console.log(arr.length - 1)
+console.log(arr.at(0))
+
+arr.push("push"," push2")
+arr.unshift("unshift")
+
+console.log(arr)
+
+arr.pop()
+arr.shift()
+console.log(arr)
+
+const f = arr.join(", ")
+console.log(f)
+console.log(arr)
+
+const message = "Это очень интересный случай"
+console.log(message.split(" ").join(" "))
+
+const arr1 = [1,2,3]
+const arr2 = arr1.slice()
+
+arr2[0] = "0"
 
 
 const arr1 = ["hi", 5, false, [1]]

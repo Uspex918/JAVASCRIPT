@@ -6,14 +6,14 @@ import {initSliders} from "./sliders.js";
 initTabs();
 initModals();
 initSliders();
-// console.log(selectors)
+console.log(selectors)
 
-// import * as constants from "./constants/index.js"
-//
-// const {a,b,c,} = constants
-//
-// console.log(a)
-// console.log(b)
-// console.log(c)
-// constants.logCat()
-// console.log(constants)
+import * as constants from "./constants/index.js"
+
+const {a,b,c,} = constants
+
+console.log(a)
+console.log(b)
+console.log(c)
+constants.logCat()
+console.log(constants)
